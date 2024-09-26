@@ -1,0 +1,762 @@
+/* --------------------------nav----------------------------------- */
+
+body{
+  margin: 0;
+  
+  
+}
+
+
+ul{
+  
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  position: static;
+  background-color:orange  ;
+
+  display: flex;
+  justify-content: space-evenly;
+
+
+}
+.page{
+  background-color: rgb(249, 246, 246);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+}
+
+
+/* ----------------------------------------------------------------- */
+
+
+/* -------------------------------Home---------------------------------- */
+
+
+.home{
+  color: white;
+  width: 100%;
+  height: fit-content;
+ 
+ background-image: url("https://wallpapercave.com/wp/wp3386774.jpg");
+  /* background-repeat: no-repeat; */
+
+}
+.text{
+height: 420px;
+  font-size: x-large;
+}
+
+.footer{
+  position: relative;
+  top: 60%;
+ 
+}
+/* --------------------------------------------------------------------- */
+
+/* --------------------------login------------------------------- */
+.login{
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.lo{
+
+  
+  padding: 50px;
+  text-align: center;
+ max-width: fit-content;
+ max-height: fit-content;
+  background-color:#d5dbdb ;
+  border-radius: 10px;
+  
+ 
+ 
+}
+.lo>input{
+  width: 200px;
+  display: flex;
+  padding: 15px 50px;
+  text-align: center;
+  border-radius: 50px;
+ 
+  border: 0px;
+  color: #000000;
+  background-color:#ffffff  ;
+  font-family: 'Times New Roman', Times, serif;
+font-size: large;
+
+
+
+}
+
+.lo>input::placeholder{
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+font-size: large;
+}
+
+.lo>button{
+background-color: #f57c00  ;
+
+}
+
+.lo>h1{
+  color:  #f57c00;
+}
+
+/* -------------------------------------------------------------------- */
+
+/* -----------------------------Regester------------------------ */
+
+
+.register{
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.reg{
+ 
+
+
+padding: 50px;
+text-align: center;
+max-width: fit-content;
+max-height: fit-content;
+background-color:#d5dbdb ;
+border-radius: 10px;
+
+}
+
+.reg>input{
+ 
+  width: 400px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 50px;
+  padding-right: 50px;
+  border: 0px;
+  color: #000000;
+  background-color:#ffffff  ;
+  font-family: 'Times New Roman', Times, serif;
+font-size: large;
+
+
+
+}
+
+.reg>input::placeholder{
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+font-size: large;
+}
+.reg>button{
+  background-color: rgb(245, 124, 0)  ;
+}
+
+.reg>h1{
+  color:  #f57c00;
+
+}
+
+
+/* ----------------------------------------------------------------------- */
+
+
+/* -----------------------------Payment---------------------------------------- */
+.pay{
+  /* background-color: #99991e; */
+  background-image: url("https://cdn.zeebiz.com/sites/default/files/styles/zeebiz_850x478/public/2020/09/30/129968-sbi-card.jpg?itok=5VDAHud0");
+ 
+  background-repeat: no-repeat;
+   background-size: cover;
+  padding: 200px;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.atmcard{                            
+   background-color: rgb(19, 19, 19);
+ /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYj9UL0XsEDwuQ0R4mICFdBFsWS4s5iVfGGQ&s"); */
+  /* background-image: url("https://img.freepik.com/premium-photo/credit-card-white-background_180633-3991.jpg?w=996"); */
+  background-repeat: no-repeat;
+   background-size: cover;
+   width: 500px;
+   padding: 15px;
+   padding-top: 30px;
+   border-radius: 10px; 
+   border: 0px;
+   
+   
+   
+   font-family: 'Times New Roman', Times, serif;
+ font-size: large;
+ color: #ffffff;
+ 
+
+}
+
+
+.atmcard>form{
+  padding-left: 50px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction:column ;
+  justify-content: space-between;
+  align-items: center;
+}
+.atm>input{
+  width: 250px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  border: 0px;
+  color: #000000;
+  background-color:#fffefe86  ;
+  font-family: 'Times New Roman', Times, serif;
+font-size: large;
+
+}
+input::placeholder{
+  color: #ffffff;
+}
+
+
+.atmpay>button{
+  color: rgb(20, 20, 20);
+  background-color: #f5f5f5;
+  width: 200px;
+}
+/* ------------------------------------------------------------------------------ */
+
+
+/* -----------------------------product----------------------------------- */
+.productpage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  background-color: #b7ee128f;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 300px); 
+  grid-gap: 50px;   /* Space between the boxes*/
+  
+  }
+
+
+  .box {
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensures content stays inside the box */
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+  }
+
+  .box:hover {
+    transform: translateY(-15px); /* Lifts the box on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transition: all 0.3s ease;
+  }
+
+/* ------------------------------------------------------------- */
+
+/* ----------------------------------box------------------------------------- */
+ 
+/* .pimg>img{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 10px;
+  left: 90px;
+  
+} */
+
+
+.pimg {
+  width: 280px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  border-radius: 5px; /* Optional: rounded corners for the image */
+}
+
+.product-name{
+  
+  color:black;
+
+}
+
+.description {
+
+ width: 280px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+
+
+.price h3 {
+  
+  font-size: 18px;
+  color: red;
+  margin-top: auto; /* Pushes the price to the bottom */
+}
+
+.buy-cart{
+ 
+  display: flex;
+  gap: 50px;
+  
+}
+.buy{
+  width: 100px;
+  padding: 6px;
+background-color: rgb(8, 165, 8);
+}
+.add-cart{
+  width: 100px;
+  padding: 6px;
+  background-color: #dfdb1e;
+}
+/* ----------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------order--------------------------------------- */
+
+/* Grid layout for the container */
+.order-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single-column layout */
+  gap: 50px; /* Space between boxes */
+  justify-items: center; /* Center the boxes horizontally */
+}
+
+/* Flexbox layout for individual boxes */
+.order {
+  width: 800px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: rgba(240, 170, 40, 0.908); /* Blue background color */
+  color: white; /* Text color for visibility */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in width and height */
+  gap: 10px; /* Gap between image and details */
+}
+
+.order:hover {
+  transform: translateY(-5px); /* Lifts the box on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  transition: all 0.3s ease;
+}
+
+/* Style for the image container */
+.order-image {
+  flex: 2; /* Allow the image to take up space */
+}
+
+.image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+   
+}
+
+/* Style for the details container */
+.order-details {
+  flex: 2; /* Allow details to take up more space */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Gap between detail items */
+  font-size: 18px;
+  
+  color: rgb(0, 0, 0);
+ 
+}
+
+.order-ship-detail{
+  flex: 2; /* Allow details to take up more space */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Gap between detail items */
+  font-size: 18px;
+  
+  color: rgb(0, 0, 0);
+}
+
+
+.odr-cancel-but {
+  width: 150px;
+  background-color: rgb(255, 9, 9); 
+ 
+}
+
+
+/* -------------------------------------------------------------------------------- */
+
+
+
+
+/* ------------------------------------Cart-------------------------------------------- */
+
+
+
+
+.cart-container {
+  display: flex;
+  gap: 50px; /* Space between cart and cart-summary */
+  justify-content: center; /* Center both sections horizontally */
+  padding: 20px;
+ 
+}
+
+.cartbox {
+  width: 800px;
+  height: fit-content;
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+/* Flexbox layout for individual boxes */
+.cart {
+  width: 800px;
+  height: 150px;
+  border-radius: 10px;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(240, 170, 40, 0.908); 
+  color: white; 
+  display: flex;
+  align-items: center; 
+  padding: 10px;
+  box-sizing: border-box; /* Include padding in width and height */
+  gap: 10px; /* Gap between image and details */
+}
+
+.cart:hover {
+  transform: translateY(-5px); /* Lifts the box on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  transition: all 0.3s ease;
+}
+
+/* Style for the image container */
+.cart-image {
+  flex: 1; /* Allow the image to take up space */
+
+}
+
+
+.cart-image img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Style for the details container */
+.cart-details {
+  flex: 1; /* Allow details to take up more space */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Gap between detail items */
+
+  font-size: 18px;
+  color: rgb(3, 3, 3);
+ 
+}
+
+.price,.charge{
+  font-weight: 1000;
+  color: #f11111;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.quantity-btn {
+  padding: 5px;
+ 
+
+  background-color: #e9a528;
+  color: white;
+  border: none;
+
+ 
+}
+.quantity input {
+  width: 30px;
+  text-align: center;
+  border: 1px solid #0a0a0a;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.ship-detail{
+
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+.cart-but {
+
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.cart-button{
+  color: rgb(255, 255, 255);
+  background-color: red;
+  width: 100px;
+}
+
+
+.cart-summarybox {
+  
+  width: 400px;
+  height: 300px;
+  background-color: orange;
+  position: sticky;
+  top: 150px;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+
+
+.cart-summarybox:hover {
+  transform: translateY(5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+.cart-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #f06c64;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.remove-btn {
+  background-color: #f06c64;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+
+
+
+.cart-summary h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.checkout-btn {
+  background-color: #f06c64;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+} 
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------Footer-------------------------------------------- */
+
+
+
+
+footer {
+  margin-top: auto;
+
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+  background-color: #0000001a;
+  border-radius: 5px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section a:hover {
+    color: #f00800;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.socials img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.footer-but>button{
+ width: 100px;
+ height: 50px;
+ background-color: #00000050;
+ width: 200px;
+ height: 40px;
+}
+.footer-bottom {
+    padding: 10px 0;
+    background-color: #222;
+    color: #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+
+
+

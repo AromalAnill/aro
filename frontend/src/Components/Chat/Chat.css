@@ -1,0 +1,82 @@
+.chat{
+    height:700px;
+    background-color: rgb(92, 230, 154);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px;
+   
+  
+}
+
+.chat-box-1{
+    background-color: aquamarine;
+    width: 400px;
+    height: 610px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+   
+    
+}
+.chat-box-2{
+    background-color: rgb(217, 255, 127);
+    width: 900px;
+    height: 610px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    
+}
+
+.chat-search{
+    width: 380px;
+    display: flex;
+   
+  
+}
+.chat-search>input{
+    width: 380px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0cap;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 10;
+
+}
+.chat-search>input::placeholder{
+    color: black;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.user-box{
+    background-color: rgb(217, 255, 127);
+    width: 380px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.chating-prifile{
+    background-color: aliceblue;
+    width: 880px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+  
+}
+
+.chating-box{
+    background-color: aquamarine;
+    width: 880px;
+    height: 550px;
+    border-radius: 10px;
+}

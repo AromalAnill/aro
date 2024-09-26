@@ -1,0 +1,152 @@
+/* -----------------------------Regester------------------------ */
+
+
+.addproduct{
+    padding: 50px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .add{
+   
+  
+  
+  padding: 50px;
+  text-align: center;
+  max-width: fit-content;
+  max-height: fit-content;
+  background-color:#d5dbdb ;
+  border-radius: 10px;
+  
+  }
+  
+  .add>input{
+   
+    width: 400px;
+    padding: 15px;
+    text-align: start;
+    border-radius: 10px;
+    padding-right: 50px;
+    border: 0px;
+    background-color:#ffffff  ;
+    font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  
+  
+  
+  }
+  
+  .add>input::placeholder{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  }
+  .add>button{
+    background-color: rgb(245, 124, 0)  ;
+  }
+  
+  .add>h1{
+    color:  #f57c00;
+  
+  }
+
+  .product-remove>button{
+    width: 200px;
+    background-color: red;
+  }
+
+
+  /* ------------------------------------------------------------------------------------ */
+
+
+
+  /* ------------------------------------Viewuser----------------------------------------- */
+
+  .view-user {
+
+    padding-top: 50px;
+
+    width: 100%;
+
+    background-color: aqua;
+
+    color: #d5dbdb;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+  }
+
+ 
+
+  .view-user-container {
+
+    display: grid;
+
+    gap: 20px;
+
+    grid-template-columns: 1fr; /* One column to make each user-container align on the next line */
+
+   
+
+  }
+
+ 
+
+  .user-container {
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 1500px;
+    border-radius: 10px;
+    background-color: #f57c00;
+    padding-left: 30px;
+
+  }
+
+  .user-container:hover {
+    transform: translateY(-5px); /* Lifts the box on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    transition: all 0.3s ease;
+  }
+
+
+ 
+
+  .user-data {
+
+    width: 400px;
+    height: 50px;
+    background-color: rgba(56, 240, 0, 0);
+    border-radius: 5px;
+   color: black;
+    align-content: center;
+    font-weight: 600;
+
+
+  }
+
+  .user-delt>button{
+
+    background-color: red;
+
+   
+
+  }
+  .user-delt{
+    width: 150px;
+
+  }
+
+
+
+
+  /* ------------------------------------------------------------------------------------ */
