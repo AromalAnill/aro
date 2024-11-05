@@ -1,32 +1,26 @@
 const express = require ('express')
 const app = express()
 require("dotenv").config()
-
-const mongoose = require ("mongoose")
-
-const connectDB  = async () => { 
-
-    try{
-
-        await mongoose.connect(process.env.MONGODB_DATABASE);
-
-        console.log("MongoDB connected")
-    }
-    catch (error){
-        console.log(error);
-        
-    }
- };
- connectDB()
+const connectDB = require('./database/database')
+const errorHandler = require('./middleware/errorhandiler')
+const cookieParser = require('cookie-parser')
+const router = require('./routes')
 
 
+connectDB()
+app.use(express.json())
+app.use(cookieParser())
+app.use(router)
 
+app.use(errorHandler)
 
 app.get('/',(req,res)=>{ 
-    res.send("project is running")
-
+    res.send("project is running ") 
 })
+
+
+
 app.listen(process.env.PORT,()=>{
-    console.log(`http://localhost:${process.env.PORT}`);
+    console.log( "Click here to run "+`http://localhost:${process.env.PORT}`);
     
 })

@@ -1,32 +1,37 @@
 const mongoose = require('mongoose')
-
-
-
-
 const userSchema = new mongoose.Schema({
-    name:{
+    
+    email:{
+        type:String,
+        trim:true,
+        required:true,
+        unique:true 
+
+    },
+    
+    username:{
         type:String,
         trim:true,
         min:[3,"Name is too Short"],
         max:[15,"Name is too Long"],
         required:true
     },
-    email:{
-        type:String,
-        trim:true,
-        required:true,
-        unique:true
-        
-
-    },
 
     phone:{
-        type:Number,
+        type:String,
         trim:true,
         min:[10, "enter a valid phone number"],
         max:[10,"enter a valid phone number"],
         required:true,
         unique:true
+
+    },
+
+    address:{
+        type:String,
+        trim:true,
+        min: 10,
+        max: 100,
 
     },
     password:{
@@ -41,6 +46,6 @@ const userSchema = new mongoose.Schema({
 timestamps:true
 })
 
-const  User=  mongoose.Model("User",userSchema)
+const User = mongoose.model("User",userSchema)
 
 module.exports = User

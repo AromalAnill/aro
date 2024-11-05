@@ -35,8 +35,9 @@ export const Cart = () => {
 
 <div className='ship-detail'>
 
-<div class="Number">Number of Product</div>
+<div class="Number">Shipping date</div>
 <div class="charge">Total Price</div>
+<div class="Address">Address</div>
 
 </div>
 <div className='cart-but'>
