@@ -1,56 +1,85 @@
+
+h1{
+  color:  #f57c00;
+
+}
+
+
 /* -----------------------------Regester------------------------ */
 
+.addproduct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  /* padding-top: 20px; */
+  height: 720px;
+}
 
-.addproduct{
-    padding: 50px;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  .add{
-   
-  
-  
-  padding: 50px;
-  text-align: center;
-  max-width: fit-content;
-  max-height: fit-content;
-  background-color:#d5dbdb ;
+.add {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #000000;
+  width: 900px;
+  padding: 10px;
   border-radius: 10px;
-  
-  }
-  
-  .add>input{
-   
-    width: 400px;
-    padding: 15px;
-    text-align: start;
-    border-radius: 10px;
-    padding-right: 50px;
-    border: 0px;
-    background-color:#ffffff  ;
-    font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.add h1 {
+  color: orange;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.add input[type="text"],
+.add input[type="file"] {
+  width: 600px;
+  /* height: 40px; */
+  padding: 12px;
+  /* margin-bottom: 15px; */
+  border-style: none;
+  border-radius: 50px;
+  font-size: 15px;
+
+  background-color: #5e5b5b65;
+}
+
+/* .add input:focus {
+  border-color: #050505;
+  outline: none;
+} */
+
+.add_btn{
+
+  padding-top: 15px;
+}
+.add button {
+  align-items: end;
+  width: 400px;
+  height: 40px;
+  background-color: #f57c00;
+  color: #000000;
   font-size: large;
-  
-  
-  
-  }
-  
-  .add>input::placeholder{
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-  font-size: large;
-  }
-  .add>button{
-    background-color: rgb(245, 124, 0)  ;
-  }
-  
-  .add>h1{
-    color:  #f57c00;
-  
-  }
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add button:hover {
+  background-color: #e56a00;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+/* 
+  margin: -2px 0 10px; */
+}
+
 
   .product-remove>button{
     width: 200px;
@@ -70,7 +99,7 @@
 
     width: 100%;
 
-    background-color: aqua;
+    /* background-color: aqua; */
 
     color: #d5dbdb;
 

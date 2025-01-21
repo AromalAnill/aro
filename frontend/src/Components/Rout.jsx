@@ -14,6 +14,8 @@ import Adminproduct from './Admin/Adminproduct'
 import Cart from './User/Cart'
 import Userprofile from './User/Userprofile'
 import Viewuser from './Admin/Viewuser'
+import ProductsView from './User/ProductView'
+import Test from './Admin/test'
 
  
 const Rout = () => {
@@ -72,6 +74,9 @@ const Rout = () => {
         <Route path='/Cart' element={<Cart/>} > </Route>
         <Route path='/Adminproduct' element={<Adminproduct/>} > </Route>
         <Route path='/Viewuser' element={<Viewuser/>} > </Route>
+        <Route path='/productView/:_id' element={<ProductsView/>} > </Route>
+        <Route path='/Test' element={<Test/>} > </Route>
+ 
             
        </Routes>
 

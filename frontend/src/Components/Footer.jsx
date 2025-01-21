@@ -6,13 +6,13 @@ const Footer = () => {
    
 
 <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
+        <div className="footer-container">
+            <div className="footer-section about">
                 <h2>About Us</h2>
                 <p>We are a leading eCommerce platform, providing the best online shopping experience with a wide range of products.</p>
             </div>
 
-            <div class="footer-section links">
+            <div className="footer-section links">
                 <h2>Quick Links</h2>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -27,11 +27,11 @@ const Footer = () => {
                   </div>
             </div>
 
-            <div class="footer-section contact">
+            <div className="footer-section contact">
                 <h2>Contact Us</h2>
                 <p>Email: aromal@gmail.com</p>
                 <p>Phone: 0000000000</p>
-                <div class="socials">
+                <div className="socials">
               
                     <a href="#"><img src="facebook-icon.png" alt="Facebook"/></a>
                     <a href="#"><img src="twitter-icon.png" alt="Twitter"/></a>
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
         </div>
 
-        {/* <div class="footer-bottom">
+        {/* <div className="footer-bottom">
                ecommerce website
         </div> */}
     </footer>

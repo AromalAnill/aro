@@ -11,7 +11,9 @@ const Adminnav = () => {
       {/* <a href="./">Home</a> */}
       <a href="./Addproduct">AddProduct</a>
       <a href="./Adminproduct">Adminproduct</a>
-      <a href="./Viewuser">Viewuser</a>
+      <a href="./Viewuser">Viewuserss</a>
+      <a href='/Test'>test</a>
+      <a href='/'>Home</a>
       {/* <button>Logout</button> */}
 
           

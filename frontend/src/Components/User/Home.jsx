@@ -12,9 +12,9 @@ const Home = () => {
        
       
           <div className='text'>
-          <center><h1>Welcom to home</h1></center>
+          <center><h1>Welcom to homee</h1></center>
      
-          <center><h1>Welcom to home</h1></center>
+          <center><h1>Welcom to homee</h1></center>
         
           
       

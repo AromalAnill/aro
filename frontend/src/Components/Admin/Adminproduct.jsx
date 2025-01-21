@@ -1,7 +1,59 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Adminnav from './Adminnav'
+import axios from 'axios';
+import { BASE_URL } from '../../../utils/url';
+import { adminDeleteproduct, adminViewproduct } from '../../../services/adminService';
+
 
 const Adminproduct = () => {
+
+ 
+    const [product, setProduct] = useState([]);
+  
+    useEffect(() => {
+      fetchProduct();
+    }, [product]);
+
+    const fetchProduct = () => {
+      adminViewproduct()
+        .then((data) => {
+          setProduct(data); 
+        })
+        .catch((error) => {
+          console.error("Error fetching products:", error);
+        });
+    };
+  
+    // const fetchProduct = async () => {
+    //   try {
+    //     const product = await axios.get(`${BASE_URL}/user/allProducts`);
+    //     setProduct(product.data); // Assuming product.data contains the product list
+    //   } catch (error) {
+    //     console.error("Error fetching products:", error);
+    //   }
+    // };
+
+    
+const deleteProduct = (_id)=>{
+  adminDeleteproduct(_id).then(()=>{
+    console.log("Product deleted sussesfully");     
+  })
+  .catch((error)=>console.log(error))
+}
+
+// const deleteProduct = async(_id)=>{
+  // try{
+  //  await axios.delete(`${BASE_URL}/admin/deleteProduct`,{data:{_id}})
+  
+  //   fetchProduct()
+  // }
+  // catch (error){    
+  //   console.log("user not deleted due to error ",error);
+    
+  // }
+  // }
+
+
   return (
     <div>
       <Adminnav/>
@@ -9,238 +61,42 @@ const Adminproduct = () => {
       
      <div className='pro'>
      
-      <div class="container">
+      <div className="container">
 
-   {/* ------------------------------------------------------------- */}
-   
-   <div class="box">
+   {
+
+    product?.map((data)=>(
     
-    <div className='pimg'>
-    <img src=" https://tse4.mm.bing.net/th?id=OIP.HW9o-gKESImEapaUq7WbIgHaJQ&pid=Api&P=0&h=180" alt="" />
+   <div key={data._id} className="box">
+    
+   <div className='pimg'>
+   <img src=" https://tse4.mm.bing.net/th?id=OIP.HW9o-gKESImEapaUq7WbIgHaJQ&pid=Api&P=0&h=180" alt="" />
 
-    </div>
-    <div className='product-name'>
-    <h2>Name</h2>
-    </div>
+   </div>
+   <div className='product-name'>
+   <h2>{data.product_name}</h2>
+   </div>
 
 <div className='description'>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium officia, vero eligendi perferendis, explicabo fuga architecto voluptas, ab adipisci minima sit quos quia repellendus libero sequi. Voluptatum, doloremque qui.</p>
-
-  </div>  
- 
+<p>{data.product_description}</p>
 
 
-   <div className='price'>
-   <h3>Price</h3>
-   </div>
-   <div className='product-remove'>
-    <button>Remove</button>
-   </div>
+ </div>  
 
-   </div>
+  <div className='price'>
+  <h3>{data.price +"$"}</h3>
+  
+  </div>
+  <div className='product-remove'>
+   <button onClick={()=>{deleteProduct(data._id)}}>Remove</button>
+  </div>
 
-
-   {/* ----------------------------------------------------------- */}
-   
-
-   <div class="box">
-    
-    <div className='pimg'>
-    <img src=" https://tse4.mm.bing.net/th?id=OIP.HW9o-gKESImEapaUq7WbIgHaJQ&pid=Api&P=0&h=180" alt="" />
-
-    </div>
-    <div className='product-name'>
-    <h2>Name</h2>
-    </div>
-
-<div className='description'>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium officia, vero eligendi perferendis, explicabo fuga architecto voluptas, ab adipisci minima sit quos quia repellendus libero sequi. Voluptatum, doloremque qui.</p>
-
-  </div>   
+  </div>
+    ))
+   }
 
 
-   <div className='price'>
-   <h3>Price</h3>
-   </div>
-
-   <div className='product-remove'>
-    <button>Remove</button>
-   </div>
-
-   </div>
-
-
-
-
-   <div class="box">
-    
-    <div className='pimg'>
-    <img src="" alt="" />
-    </div>
-    <div className='product-name'>
-    <h2>Name</h2>
-    </div>
-
-<div className='description'>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium officia, vero eligendi perferendis, explicabo fuga architecto voluptas, ab adipisci minima sit quos quia repellendus libero sequi. Voluptatum, doloremque qui.</p>
-
-  </div>   
-
-
-   <div className='price'>
-   <h3>Price</h3>
-   </div>
-
-   <div className='product-remove'>
-    <button>Remove</button>
-   </div>
-
-   </div>
-   
-
-
-   <div class="box">
-    
-    <div className='pimg'>
-     <img src="" alt="" />
-    </div>
-    <div className='product-name'>
-    <h2>Name</h2>
-    </div>
-
-<div className='description'>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae praesentium officia, vero eligendi perferendis, explicabo fuga architecto voluptas, ab adipisci minima sit quos quia repellendus libero sequi. Voluptatum, doloremque qui.</p>
-
-  </div>   
-
-
-   <div className='price'>
-   <h3>Price</h3>
-   </div>
-
-   <div className='product-remove'>
-    <button>Remove</button>
-   </div>
-
-   </div>
-
-
-
-
-
-
-
-
-   {/* --------------------------------------------------------------- */}
-   
-
-
- 
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
-   <div class="box"></div>
  </div>
       </div>
       </div>
@@ -250,3 +106,4 @@ const Adminproduct = () => {
 }
 
 export default Adminproduct
+

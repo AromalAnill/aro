@@ -4,7 +4,7 @@ import Usernav from './Usernav'
 const Payment = () => {
   return (
     <div className='pay'>
-      <Usernav/>
+
      
       <div className='atmcard'> 
       {/* <h1>pay</h1> <br /><br /> */}

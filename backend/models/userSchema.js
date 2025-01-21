@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
         type:String,
         trim:true,
         min:[10, "enter a valid phone number"],
-        max:[10,"enter a valid phone number"],
+        // max:[10,"enter a valid phone number"],
         required:true,
         unique:true
 

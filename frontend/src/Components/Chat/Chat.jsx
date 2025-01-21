@@ -25,7 +25,7 @@ const Chat = () => {
       <div className='chat-box-2'>
 
 
-            <div className='chating-prifile'>
+            <div className='chating-profile'>
 
             </div>
         <div className='chating-box'>
